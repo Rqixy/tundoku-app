@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>積読アプリ</title>
+    <link rel="stylesheet" href="client.css">
+</head>
+<body>
+    <div class="notification-toast">
+        <h4>積まれたままの動画があります。</h4>
+    </div>
+
+    <div class="favorite-movie">
+        <div class="favorite-movie__notification-config">
+            <input 
+                class="favorite-movie__threshold-input" 
+                type="text"
+                maxlength="3"
+                oninput="onInputThreshold()"
+            />
+            <span>日前以前に積んだ動画があった場合は通知します</span>
+            <div>(半角数字のみ入力可能)</div>
+        </div>
+        <div class="favorite-movie__list"></div>
+    </div>
+
+    <div class="search">
+        <div class="search-form">
+            <input type="text" class="search-input" />
+            <button onclick="onClickSearch()">検索</button>
+            <select class="search-order">
+                <option value="viewCount">再生回数順</option>
+                <option value="rating">評価が高い順</option>
+                <option value="date">アップロード順</option>
+            </select>
+        </div>
+
+        <div class="search-results"></div>
+    </div>
+
+    <script src="./moment.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

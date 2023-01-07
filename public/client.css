@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    column-gap: 100px;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.notification-toast {
+    animation-name: fade-out;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    background-color: #ffe8af;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #000;
+    display: none;
+    overflow: scroll;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    width: 600px;
+    min-height: 300px;
+}
+
+.notification-toast.display {
+    display: block;
+}
+
+.favorite-movie__max_alert {
+    color: #ff0000;
+    display: none;
+}
+
+.favorite-movie__max_alert.display {
+    display: block;
+}
+
+.favorite-movie__threshold-input {
+    width: 30px;
+}
+
+.favorite-movie__notification-config {
+    margin-bottom: 10px;
+}
+
+.search-results__item,
+.favorite-movie__item--old,
+.favorite-movie__item {
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.favorite-movie__item--old {
+    background-color: #ffe8af;
+}
+
+.favorite-movie__memo {
+    margin-top: 10px;
+    word-break: break-all;
+}
+
+.favorite-movie {
+    border: solid 1px #000;
+    overflow: scroll;
+    padding: 10px;
+    width: 400px;
+}
+
+.search {
+    border: 1px solid #000;
+    overflow: scroll;
+    padding: 10px 20px;
+    width: 350px;
+}
+
+.search-form {
+    text-align: center;
+}
+
+.search-results {
+    margin-top: 10px;
+}
+
+.search-results__item-title,
+.favorite-movie__item-title {
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.search-results__item-image,
+.favorite-movie__item-image {
+    height: 90px;
+    width: 120px;
+}
+
+.search-results__flex-container,
+.favorite-movie__flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-results__container-contents, 
+.favorite-movie__container-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-results__save-textarea {
+    resize: none;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
